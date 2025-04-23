@@ -4,6 +4,9 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
+import { Toaster } from "react-hot-toast";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -47,12 +50,13 @@ export default function RootLayout({
                      * sidebar = 3 columns & hidden on small screens
                      * main = 9 columns
                      */}
-                    <div className="hidden lg:block lg:col-span-3">Sidebar</div>
+                    <div className="hidden lg:block lg:col-span-3"><Sidebar/></div>
                     <div className="lg:col-span-9">{children}</div>
                   </div>
                 </div>
               </main>
             </div>
+            <Toaster />
           </ThemeProvider>
         </body>
       </html>
