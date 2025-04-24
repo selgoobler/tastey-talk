@@ -1,4 +1,4 @@
-"use client";
+"use client"; //client because of interactions (onClick)
 
 import { Loader2Icon, Trash2Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
